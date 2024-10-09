@@ -39,17 +39,19 @@ public class Program {
 		}
 		
 		System.out.println("\n ===== Teste 4 Seller Insert  =====");
-		Seller newSeller = new Seller(null, "Mateus", "Mateus@gmail.com", new Date(), 4000.00, department);
-		sellerDao.insert(newSeller);
-		System.out.println("Inserted new id= "+ newSeller.getId());
+		//Seller newSeller = new Seller(null, "Mateus", "Mateus@gmail.com", new Date(), 4000.00, department);
+		//sellerDao.insert(newSeller);
+	//	System.out.println("Inserted new id= "+ newSeller.getId());
 		
 		System.out.println("\n ===== Teste 5 Seller Update  =====");
-		seller = sellerDao.findById(2);
+		seller = sellerDao.findById(1);
 		seller.setName("Marta Waine");
 		sellerDao.update(seller);
 		System.out.println("Upadate Completed");
 		
-		
+		System.out.println("\n ===== Teste 6 Seller Delete  =====");
+		sellerDao.deleteById(16);
+		System.out.println("delete Completed");
 	}
 
 }
